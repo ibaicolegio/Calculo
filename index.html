@@ -49,14 +49,14 @@
       <input
         class="form-control"
         list="datalistOptions"
-        id="Material"
+        id="material"
         placeholder="Material"
         onchange="material()"
       />
       <datalist id="datalistOptions">
-        <option value="Aluminio 2.7"></option>
-        <option value="Hierro 8"></option>
-        <option value="Acero Inoxidable 8"></option>
+        <option value="Aluminio"></option>
+        <option value="Hierro"></option>
+        <option value="Acero Inoxidable"></option>
       </datalist>
       <div id="calculo" style="display: none">
         <hr />
@@ -148,13 +148,13 @@
             />
           </div>
         </div>
-        <button type="button" class="btn btn-secondary" onclick="anyadir()">Añadir</button>
+        <button type="button" class="btn btn-secondary mt-2" onclick="anyadir()">Añadir</button>
       </div>
       <div id="lista" style="display: none">
         <hr />
         <ul class="list-group" id="elementosLista">
         </ul>
-        <button type="button" class="btn btn-danger" onclick="borrar()">Borrar</button>
+        <button type="button" class="btn btn-danger mt-2" onclick="borrar()">Borrar</button>
       </div>
     </div>
     <script src="index.js"></script>

@@ -1,10 +1,21 @@
 let total=0;
 
 function material(){
-    let material=document.getElementById("Material").value;
-    const materialArray = material.split(" ");
-    let precio = materialArray[materialArray.length - 1];
-    document.getElementById("densidad").value=precio;
+    let material=document.getElementById("material").value;
+    let densidad = "";
+    switch (material)
+    {
+    case 'Aluminio':
+        densidad=2.7;
+        break;
+    case 'Hierro':
+        densidad=8;
+        break;
+    case 'Acero Inoxidable':
+        densidad=8;
+        break;
+    }
+    document.getElementById("densidad").value=densidad;
     console.log(material);
     document.getElementById("calculo").style.display = "block";
 }
@@ -30,9 +41,12 @@ function lista(){
         let materiales=localStorage.materiales;
         const materialesArray = materiales.split(";");
         let elementos="";
+        let total=0;
         for (const iterator of materialesArray) {
-            elementos+=`<li class="list-group-item">`+iterator+`</li>`;
+            elementos+=`<li class="list-group-item bg-secondary bg-gradient bg-opacity-25">`+iterator+`</li>`;
+            total+=parseFloat(iterator.substring(iterator.lastIndexOf(" "),iterator.length-1));
         }
+        elementos+=`<li class="list-group-item bg-secondary bg-gradient bg-opacity-75">Total: `+total+`€</li>`;
         document.getElementById("elementosLista").innerHTML = elementos;
         document.getElementById("lista").style.display = "block";
     } else {
@@ -44,14 +58,31 @@ function lista(){
 
 function anyadir(){
     let total=document.getElementById("cantTotal").value;
+    let espesor=document.getElementById("espesor").value;
+    let material=document.getElementById("material").value;
     let materiales=localStorage.materiales;
     const materialesArray = materiales.split(";");
-    let tamanyo=materialesArray.length;
-    localStorage.materiales += ["Material "+tamanyo+":"+total+";"];
+    if(localStorage.materiales==""){
+        localStorage.materiales += material+" "+espesor+" : "+total+"€";
+    } else {
+        localStorage.materiales += ";"+material+" "+espesor+" : "+total+"€";
+    }
+    reiniciar();
     lista();
 }
 
 function borrar(){
     localStorage.materiales="";
     lista();
+}
+
+function reiniciar(){
+    document.getElementById("material").value="";
+    document.getElementById("largo").value="";
+    document.getElementById("ancho").value="";
+    document.getElementById("espesor").value="";
+    document.getElementById("densidad").value="";
+    document.getElementById("precio").value="";
+    document.getElementById("calculo").style.display = "none";
+    document.getElementById("total").style.display = "none";
 }
