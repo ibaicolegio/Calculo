@@ -158,10 +158,98 @@
                     <input id="otros" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Otros" aria-label="Otros" onchange="resultado()"/>
                     <input type="text" class="form-control text-center" placeholder="€" disabled>
                 </div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Materiales</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td id="materialTotal"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Programación</th>
+                      <td id="pro">-</td>
+                      <td id="proM">-</td>
+                      <td id="proT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Corte</th>
+                      <td id="cor">-</td>
+                      <td id="corM">-</td>
+                      <td id="corT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Plegar</th>
+                      <td id="ple">-</td>
+                      <td id="pleM">-</td>
+                      <td id="pleT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Op. Auxiliares</th>
+                      <td id="opAux">-</td>
+                      <td id="opAuxM">-</td>
+                      <td id="opAuxT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Mecanizar</th>
+                      <td id="mec">-</td>
+                      <td id="mecM">-</td>
+                      <td id="mecT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Soldar</th>
+                      <td id="sol">-</td>
+                      <td id="solM">-</td>
+                      <td id="solT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Pintura</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td id="pinT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Subcontratacion</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td id="subT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Montar</th>
+                      <td id="mon">-</td>
+                      <td id="monM">-</td>
+                      <td id="monT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Embalar</th>
+                      <td id="emb">-</td>
+                      <td id="embM">-</td>
+                      <td id="embT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Transporte</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td id="tranT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Otros</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td id="otrT">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td id="tot">-</td>
+                      <td id="mar">-</td>
+                      <td id="totalConMarg">-</td>
+                    </tr>
+                  </tbody>
+                </table>
                 <div class="pb-5">
                     <label for="margen" class="form-label">Margen</label>
                     <input id="margen" type="number" class="form-control text-center  bg-secondary bg-opacity-25" placeholder="Margen" aria-label="Margen" value="1.4" onchange="resultado()"/>
-                    <input id="resultadoFinal" type="text" class="form-control text-center  bg-secondary bg-opacity-75" placeholder="Total" aria-label="Total" disabled/>
+                    <input id="resultadoFinal" type="hidden" class="form-control text-center  bg-secondary bg-opacity-75" placeholder="Total" aria-label="Total" disabled/>
                 </div>
             </div>
         </div>

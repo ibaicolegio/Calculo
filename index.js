@@ -46,8 +46,9 @@ function lista(){
             elementos+=`<li class="list-group-item bg-secondary bg-gradient bg-opacity-25">`+iterator+`</li>`;
             total+=parseFloat(iterator.substring(iterator.lastIndexOf(" "),iterator.length-1));
         }
-        elementos+=`<li class="list-group-item bg-secondary bg-gradient bg-opacity-75">Total: `+total+`€</li>`;
+        elementos+=`<li class="list-group-item bg-secondary bg-gradient bg-opacity-75">Total: `+total.toFixed(2)+`€</li>`;
         document.getElementById("materialesTotal").value = total;
+        document.getElementById("materialTotal").innerHTML = total.toFixed(2)+"€";
         document.getElementById("elementosLista").innerHTML = elementos;
         document.getElementById("lista").style.display = "block";
     } else {
@@ -99,67 +100,136 @@ function operar(){
 }
 
 function resultado(){
-
-
-
     let materialesTotal=document.getElementById("materialesTotal").value;
 
     let programacion=document.getElementById("programacion").value;
     let programacionM=document.getElementById("programacionM").value;
+    let proT=0;
     if(programacion!="" && programacionM!=""){
-        document.getElementById("programacionT").value=(parseFloat(programacion)*parseFloat(programacionM)).toFixed(2)+"€";
+        proT=(parseFloat(programacion)*parseFloat(programacionM));
+        document.getElementById("programacionT").value=proT.toFixed(2)+"€";
+        document.getElementById("pro").innerHTML = parseFloat(programacion).toFixed(2)+"€";
+        document.getElementById("proM").innerHTML = "x"+parseFloat(programacionM).toFixed(2);
+        document.getElementById("proT").innerHTML = proT.toFixed(2)+"€";
     }
 
+    let corT=0;
     let corte=document.getElementById("corte").value;
     let corteM=document.getElementById("corteM").value;
     if(corte!="" && corteM!=""){
-        document.getElementById("corteT").value=(parseFloat(corte)*parseFloat(corteM)).toFixed(2)+"€";
+        corT=parseFloat(corte)*parseFloat(corteM);
+        document.getElementById("corteT").value=corT+"€";
+        document.getElementById("cor").innerHTML = parseFloat(corte).toFixed(2)+"€";
+        document.getElementById("corM").innerHTML = "x"+parseFloat(corteM).toFixed(2);
+        document.getElementById("corT").innerHTML = corT.toFixed(2)+"€";
     }
 
+    let pleT=0;
     let plegar=document.getElementById("plegar").value;
     let plegarM=document.getElementById("plegarM").value;
     if(plegar!="" && plegarM!=""){
-        document.getElementById("plegarT").value=(parseFloat(plegar)*parseFloat(plegarM)).toFixed(2)+"€";
+        pleT=(parseFloat(plegar)*parseFloat(plegarM));
+        document.getElementById("plegarT").value=pleT.toFixed(2)+"€";
+        document.getElementById("ple").innerHTML = parseFloat(plegar).toFixed(2)+"€";
+        document.getElementById("pleM").innerHTML = "x"+parseFloat(plegarM).toFixed(2);
+        document.getElementById("pleT").innerHTML = pleT.toFixed(2)+"€";
     }
 
+    let opAuxT=0;
     let operacionesAuxiliares=document.getElementById("operacionesAuxiliares").value;
     let operacionesAuxiliaresM=document.getElementById("operacionesAuxiliaresM").value;
     if(operacionesAuxiliares!="" && operacionesAuxiliaresM!=""){
-        document.getElementById("operacionesAuxiliaresT").value=(parseFloat(operacionesAuxiliares)*parseFloat(operacionesAuxiliaresM)).toFixed(2)+"€";
+        opAuxT=(parseFloat(operacionesAuxiliares)*parseFloat(operacionesAuxiliaresM));
+        document.getElementById("operacionesAuxiliaresT").value=opAuxT.toFixed(2)+"€";
+        document.getElementById("opAux").innerHTML = parseFloat(operacionesAuxiliares).toFixed(2)+"€";
+        document.getElementById("opAuxM").innerHTML = "x"+parseFloat(operacionesAuxiliaresM).toFixed(2);
+        document.getElementById("opAuxT").innerHTML = opAuxT.toFixed(2)+"€";
     }
 
+    let mecT=0;
     let mecanizar=document.getElementById("mecanizar").value;
     let mecanizarM=document.getElementById("mecanizarM").value;
     if(mecanizar!="" && mecanizarM!=""){
-        document.getElementById("mecanizarT").value=(parseFloat(mecanizar)*parseFloat(mecanizarM)).toFixed(2)+"€";
+        mecT=(parseFloat(mecanizar)*parseFloat(mecanizarM));
+        document.getElementById("mecanizarT").value=mecT.toFixed(2)+"€";
+        document.getElementById("mec").innerHTML = parseFloat(mecanizar).toFixed(2)+"€";
+        document.getElementById("mecM").innerHTML = "x"+parseFloat(mecanizarM).toFixed(2);
+        document.getElementById("mecT").innerHTML = mecT.toFixed(2)+"€";
     }
 
+    let solT=0;
     let soldar=document.getElementById("soldar").value;
     let soldarM=document.getElementById("soldarM").value;
     if(soldar!="" && soldarM!=""){
-        document.getElementById("soldarT").value=(parseFloat(soldar)*parseFloat(soldarM)).toFixed(2)+"€";
+        solT=(parseFloat(soldar)*parseFloat(soldarM));
+        document.getElementById("soldarT").value=solT.toFixed(2)+"€";
+        document.getElementById("sol").innerHTML = parseFloat(soldar).toFixed(2)+"€";
+        document.getElementById("solM").innerHTML = "x"+parseFloat(soldarM).toFixed(2);
+        document.getElementById("solT").innerHTML = solT.toFixed(2)+"€";
     }
 
-
+    let pinT=0;
     let pintura=document.getElementById("pintura").value;
-    let subcontratacion=document.getElementById("subcontratacion").value;
+    if(pintura!=""){
+        pinT=parseFloat(pintura);
+        document.getElementById("pinT").innerHTML = pinT.toFixed(2)+"€";
+    }
 
+    let subT=0;
+    let subcontratacion=document.getElementById("subcontratacion").value;
+    if(subcontratacion!=""){
+        subT=parseFloat(subcontratacion);
+        document.getElementById("subT").innerHTML = subT.toFixed(2)+"€";
+    }
+
+    let monT=0;
     let montar=document.getElementById("montar").value;
     let montarM=document.getElementById("montarM").value;
     if(montar!="" && montarM!=""){
-        document.getElementById("montarT").value=(parseFloat(montar)*parseFloat(montarM)).toFixed(2)+"€";
+        monT=(parseFloat(montar)*parseFloat(montarM));
+        document.getElementById("montarT").value=monT.toFixed(2)+"€";
+        document.getElementById("mon").innerHTML = parseFloat(montar).toFixed(2)+"€";
+        document.getElementById("monM").innerHTML = "x"+parseFloat(montarM).toFixed(2);
+        document.getElementById("monT").innerHTML = monT.toFixed(2)+"€";
     }
 
+    let embT=0;
     let embalar=document.getElementById("embalar").value;
     let embalarM=document.getElementById("embalarM").value;
     if(embalar!="" && embalarM!=""){
-        document.getElementById("embalarT").value=(parseFloat(embalar)*parseFloat(embalarM)).toFixed(2)+"€";
+        embT=(parseFloat(embalar)*parseFloat(embalarM));
+        document.getElementById("embalarT").value=embT.toFixed(2)+"€";
+        document.getElementById("emb").innerHTML = parseFloat(embalar).toFixed(2)+"€";
+        document.getElementById("embM").innerHTML = "x"+parseFloat(embalarM).toFixed(2);
+        document.getElementById("embT").innerHTML = embT.toFixed(2)+"€";
     }
     
+    let tranT=0;
     let transporte=document.getElementById("transporte").value;
-    let otros=document.getElementById("otros").value;
+    if(transporte!=""){
+        tranT=parseFloat(transporte);
+        document.getElementById("tranT").innerHTML = tranT.toFixed(2)+"€";
+    }
 
+    let otrT=0;
+    let otros=document.getElementById("otros").value;
+    if(otros!=""){
+        otrT=parseFloat(otros);
+        document.getElementById("otrT").innerHTML = otrT.toFixed(2)+"€";
+    }
+
+    let tot=parseFloat(materialesTotal)+proT+corT+pleT+opAuxT+mecT+solT+pinT+subT+monT+embT+tranT+otrT;
+    document.getElementById("tot").innerHTML=tot.toFixed(2)+"€";
+
+    let mar=0;
+    let totalConMarg=0;
     let margen=document.getElementById("margen").value;
+    if(margen!=""){
+        mar=parseFloat(margen);
+        totalConMarg=tot*mar;
+        document.getElementById("mar").innerHTML = "x"+mar;
+        document.getElementById("totalConMarg").innerHTML = totalConMarg.toFixed(2)+"€";
+    }
 
     if(materialesTotal!="" && programacion!="" && programacionM!="" && corte!="" && corteM!="" && plegar!="" && plegarM!="" && operacionesAuxiliares!="" && operacionesAuxiliaresM!="" && 
     mecanizar!="" && mecanizarM!="" && soldar!="" && soldarM!="" && pintura!="" && subcontratacion!="" && montar!="" && montarM!="" && 
