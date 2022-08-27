@@ -82,90 +82,87 @@
             <div id="lista" style="display: none">
                 <hr/>
                 <ul class="list-group" id="elementosLista"></ul>
-                <button type="button" class="btn btn-success mt-2" onclick="operar()">Calcular</button>
+                <button type="button" class="btn btn-success mt-2" onclick="operar()">Operaciones</button>
                 <button type="button" class="btn btn-danger mt-2" onclick="borrar()">Borrar</button>
             </div>
-            <div id="operar" class="" style="display: none">
+            <div id="operar" class="mt-4" style="display: none">
+                <h1>Operaciones</h1>
                 <hr/>
+                <br>
                 <input id="materialesTotal" type="hidden" onchange="resultado()"/>
-                <div class="row">
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="programacion" class="form-label">Programación</label>
-                        <input id="programacion" type="number" class="form-control" placeholder="Programacion" aria-label="Programacion" onchange="resultado()"/>
-                        <input id="programacionM" type="number" class="form-control text-center" placeholder="ProgramacionM" aria-label="ProgramacionM" value="0.6" onchange="resultado()"/>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="corte" class="form-label">Corte</label>
-                        <input id="corte" type="number" class="form-control" placeholder="Corte" aria-label="Corte" onchange="resultado()"/>
-                        <input id="corteM" type="number" class="form-control text-center" placeholder="CorteM" aria-label="CorteM" value="2" onchange="resultado()"/>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="plegar" class="form-label">Plegar</label>
-                        <input id="plegar" type="number" class="form-control" placeholder="Plegar" aria-label="Plegar" onchange="resultado()"/>
-                        <input id="plegarM" type="number" class="form-control text-center" placeholder="PlegarM" aria-label="PlegarM" value="1" onchange="resultado()"/>
-                    </div>
+                <div class="pb-5">
+                    <label for="programacion" class="form-label">Programación</label>
+                    <input id="programacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Programacion" aria-label="Programacion" onchange="resultado()"/>
+                    <input id="programacionM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="ProgramacionM" aria-label="ProgramacionM" value="0.6" onchange="resultado()"/>
+                    <input id="programacionT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Programacion" aria-label="ProgramacionT" disabled/>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="operacionesAuxiliares" class="form-label">Op. Auxiliares</label>
-                        <input id="operacionesAuxiliares" type="number" class="form-control" placeholder="Op. Auxiliares" aria-label="operacionesAuxiliares" onchange="resultado()"/>
-                        <input id="operacionesAuxiliaresM" type="number" class="form-control text-center" placeholder="Op. AuxiliaresM" aria-label="operacionesAuxiliares" value="0.6" onchange="resultado()"/>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="mecanizar" class="form-label">Mecanizar</label>
-                        <input id="mecanizar" type="number" class="form-control" placeholder="Mecanizar" aria-label="Mecanizar" onchange="resultado()"/>
-                        <input id="mecanizarM" type="number" class="form-control text-center" placeholder="MecanizarM" aria-label="MecanizarM" value="0.6" onchange="resultado()"/>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="soldar" class="form-label">Soldar</label>
-                        <input id="soldar" type="number" class="form-control" placeholder="Soldar" aria-label="Soldar" onchange="resultado()"/>
-                        <input id="soldarM" type="number" class="form-control text-center" placeholder="SoldarM" aria-label="SoldarM" value="0.6" onchange="resultado()"/>
-                    </div>
+                <div class="pb-5">
+                    <label for="corte" class="form-label">Corte</label>
+                    <input id="corte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Corte" aria-label="Corte" onchange="resultado()"/>
+                    <input id="corteM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="CorteM" aria-label="CorteM" value="2" onchange="resultado()"/>
+                    <input id="corteT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Corte" aria-label="CorteT" disabled/>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="pintura" class="form-label">Pintura</label>
-                        <input id="pintura" type="number" class="form-control" placeholder="Pintura" aria-label="Pintura" onchange="resultado()"/>
-                        <input type="text" class="form-control text-center" placeholder="€" disabled>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="subcontratacion" class="form-label">Subcontratación</label>
-                        <input id="subcontratacion" type="number" class="form-control" placeholder="Subcontratacion" aria-label="Subcontratacion" onchange="resultado()"/>
-                        <input type="text" class="form-control text-center" placeholder="€" disabled>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="montar" class="form-label">Montar</label>
-                        <input id="montar" type="number" class="form-control" placeholder="Montar" aria-label="Montar" onchange="resultado()"/>
-                        <input id="montarM" type="number" class="form-control text-center" placeholder="MontarM" aria-label="MontarM" value="0.6" onchange="resultado()"/>
-                    </div>
+                <div class="pb-5">
+                    <label for="plegar" class="form-label">Plegar</label>
+                    <input id="plegar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Plegar" aria-label="Plegar" onchange="resultado()"/>
+                    <input id="plegarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="PlegarM" aria-label="PlegarM" value="1" onchange="resultado()"/>
+                    <input id="plegarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Plegar" aria-label="PlegarT" disabled/>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="embalar" class="form-label">Embalar</label>
-                        <input id="embalar" type="number" class="form-control" placeholder="Embalar" aria-label="Embalar" onchange="resultado()"/>
-                        <input id="embalarM" type="number" class="form-control text-center" placeholder="EmbalarM" aria-label="EmbalarM" value="0.6" onchange="resultado()"/>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="transporte" class="form-label">Transporte</label>
-                        <input id="transporte" type="number" class="form-control" placeholder="Transporte" aria-label="Transporte" onchange="resultado()"/>
-                        <input type="text" class="form-control text-center" placeholder="€" disabled>
-                    </div>
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="otros" class="form-label">Otros</label>
-                        <input id="otros" type="number" class="form-control" placeholder="Otros" aria-label="Otros" onchange="resultado()"/>
-                        <input type="text" class="form-control text-center" placeholder="€" disabled>
-                    </div>
+                <div class="pb-5">
+                    <label for="operacionesAuxiliares" class="form-label">Op. Auxiliares</label>
+                    <input id="operacionesAuxiliares" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. Auxiliares" aria-label="operacionesAuxiliares" onchange="resultado()"/>
+                    <input id="operacionesAuxiliaresM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. AuxiliaresM" aria-label="operacionesAuxiliares" value="0.6" onchange="resultado()"/>
+                    <input id="operacionesAuxiliaresT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Op. Auxiliares" aria-label="TotalOperacionesAuxiliares" disabled/>
                 </div>
-                <div class="row">
-                    <div class="col border border-secondary rounded py-2 border-opacity-25">
-                        <label for="margen" class="form-label">Margen</label>
-                        <input id="margen" type="number" class="form-control text-center" placeholder="Margen" aria-label="Margen" value="1.4" onchange="resultado()"/>
-                    </div>
+                <div class="pb-5">
+                    <label for="mecanizar" class="form-label">Mecanizar</label>
+                    <input id="mecanizar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Mecanizar" aria-label="Mecanizar" onchange="resultado()"/>
+                    <input id="mecanizarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MecanizarM" aria-label="MecanizarM" value="0.6" onchange="resultado()"/>
+                    <input id="mecanizarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Mecanizar" aria-label="MecanizarT" disabled/>
                 </div>
-                <ul class="list-group" id="resultadoFinal"></ul>
+                <div class="pb-5">
+                    <label for="soldar" class="form-label">Soldar</label>
+                    <input id="soldar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Soldar" aria-label="Soldar" onchange="resultado()"/>
+                    <input id="soldarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="SoldarM" aria-label="SoldarM" value="0.6" onchange="resultado()"/>
+                    <input id="soldarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Soldar" aria-label="SoldarT" disabled/>
+                </div>
+                <div class="pb-5">
+                    <label for="pintura" class="form-label">Pintura</label>
+                    <input id="pintura" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Pintura" aria-label="Pintura" onchange="resultado()"/>
+                    <input type="text" class="form-control text-center" placeholder="€" disabled>
+                </div>
+                <div class="pb-5">
+                    <label for="subcontratacion" class="form-label">Subcontratación</label>
+                    <input id="subcontratacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Subcontratacion" aria-label="Subcontratacion" onchange="resultado()"/>
+                    <input type="text" class="form-control text-center" placeholder="€" disabled>
+                </div>
+                <div class="pb-5">
+                    <label for="montar" class="form-label">Montar</label>
+                    <input id="montar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Montar" aria-label="Montar" onchange="resultado()"/>
+                    <input id="montarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MontarM" aria-label="MontarM" value="0.6" onchange="resultado()"/>
+                    <input id="montarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Montar" aria-label="MontarT" disabled/>
+                </div>
+                <div class="pb-5">
+                    <label for="embalar" class="form-label">Embalar</label>
+                    <input id="embalar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Embalar" aria-label="Embalar" onchange="resultado()"/>
+                    <input id="embalarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="EmbalarM" aria-label="EmbalarM" value="0.6" onchange="resultado()"/>
+                    <input id="embalarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Embalar" aria-label="EmbalarT" disabled/>
+                </div>
+                <div class="pb-5">
+                    <label for="transporte" class="form-label">Transporte</label>
+                    <input id="transporte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Transporte" aria-label="Transporte" onchange="resultado()"/>
+                    <input type="text" class="form-control text-center" placeholder="€" disabled>
+                </div>
+                <div class="pb-5">
+                    <label for="otros" class="form-label">Otros</label>
+                    <input id="otros" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Otros" aria-label="Otros" onchange="resultado()"/>
+                    <input type="text" class="form-control text-center" placeholder="€" disabled>
+                </div>
+                <div class="pb-5">
+                    <label for="margen" class="form-label">Margen</label>
+                    <input id="margen" type="number" class="form-control text-center  bg-secondary bg-opacity-25" placeholder="Margen" aria-label="Margen" value="1.4" onchange="resultado()"/>
+                    <input id="resultadoFinal" type="text" class="form-control text-center  bg-secondary bg-opacity-75" placeholder="Total" aria-label="Total" disabled/>
+                </div>
             </div>
         </div>
         <script src="index.js"></script>

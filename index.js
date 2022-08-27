@@ -106,30 +106,55 @@ function resultado(){
 
     let programacion=document.getElementById("programacion").value;
     let programacionM=document.getElementById("programacionM").value;
+    if(programacion!="" && programacionM!=""){
+        document.getElementById("programacionT").value=(parseFloat(programacion)*parseFloat(programacionM)).toFixed(2)+"€";
+    }
 
     let corte=document.getElementById("corte").value;
     let corteM=document.getElementById("corteM").value;
+    if(corte!="" && corteM!=""){
+        document.getElementById("corteT").value=(parseFloat(corte)*parseFloat(corteM)).toFixed(2)+"€";
+    }
 
     let plegar=document.getElementById("plegar").value;
     let plegarM=document.getElementById("plegarM").value;
+    if(plegar!="" && plegarM!=""){
+        document.getElementById("plegarT").value=(parseFloat(plegar)*parseFloat(plegarM)).toFixed(2)+"€";
+    }
 
     let operacionesAuxiliares=document.getElementById("operacionesAuxiliares").value;
     let operacionesAuxiliaresM=document.getElementById("operacionesAuxiliaresM").value;
+    if(operacionesAuxiliares!="" && operacionesAuxiliaresM!=""){
+        document.getElementById("operacionesAuxiliaresT").value=(parseFloat(operacionesAuxiliares)*parseFloat(operacionesAuxiliaresM)).toFixed(2)+"€";
+    }
 
     let mecanizar=document.getElementById("mecanizar").value;
     let mecanizarM=document.getElementById("mecanizarM").value;
+    if(mecanizar!="" && mecanizarM!=""){
+        document.getElementById("mecanizarT").value=(parseFloat(mecanizar)*parseFloat(mecanizarM)).toFixed(2)+"€";
+    }
 
     let soldar=document.getElementById("soldar").value;
     let soldarM=document.getElementById("soldarM").value;
+    if(soldar!="" && soldarM!=""){
+        document.getElementById("soldarT").value=(parseFloat(soldar)*parseFloat(soldarM)).toFixed(2)+"€";
+    }
+
 
     let pintura=document.getElementById("pintura").value;
     let subcontratacion=document.getElementById("subcontratacion").value;
 
     let montar=document.getElementById("montar").value;
     let montarM=document.getElementById("montarM").value;
+    if(montar!="" && montarM!=""){
+        document.getElementById("montarT").value=(parseFloat(montar)*parseFloat(montarM)).toFixed(2)+"€";
+    }
 
     let embalar=document.getElementById("embalar").value;
     let embalarM=document.getElementById("embalarM").value;
+    if(embalar!="" && embalarM!=""){
+        document.getElementById("embalarT").value=(parseFloat(embalar)*parseFloat(embalarM)).toFixed(2)+"€";
+    }
     
     let transporte=document.getElementById("transporte").value;
     let otros=document.getElementById("otros").value;
@@ -154,9 +179,9 @@ function resultado(){
             parseFloat(otros))*
             parseFloat(margen);
 
-        document.getElementById("resultadoFinal").innerHTML = `<li class="list-group-item bg-secondary bg-gradient bg-opacity-75">Resultado: `+resultado.toFixed(2)+`€</li>`;
+        document.getElementById("resultadoFinal").value = resultado.toFixed(2)+`€`;
     } else {
-        document.getElementById("resultadoFinal").innerHTML = "";
+        document.getElementById("resultadoFinal").value = "";
     }
     
 }
