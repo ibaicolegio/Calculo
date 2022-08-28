@@ -211,28 +211,4 @@ function resultado(){
         totalConMarg=(parseFloat(materialesTotal)+tot)*mar;
         document.getElementById("totalConMarg").innerHTML = totalConMarg.toFixed(2)+"€";
     }
-
-    if(materialesTotal!="" && programacion!="" && programacionM!="" && corte!="" && corteM!="" && plegar!="" && plegarM!="" && operacionesAuxiliares!="" && operacionesAuxiliaresM!="" && 
-    mecanizar!="" && mecanizarM!="" && soldar!="" && soldarM!="" && pintura!="" && subcontratacion!="" && montar!="" && montarM!="" && 
-    embalar!="" && embalarM!="" && transporte!="" && otros!="" && margen!=""){
-        let resultado=(parseFloat(materialesTotal)+
-            (parseFloat(programacion)*parseFloat(programacionM))+
-            (parseFloat(corte)*parseFloat(corteM))+
-            (parseFloat(plegar)*parseFloat(plegarM))+
-            (parseFloat(operacionesAuxiliares)*parseFloat(operacionesAuxiliaresM))+
-            (parseFloat(mecanizar)*parseFloat(mecanizarM))+
-            (parseFloat(soldar)*parseFloat(soldarM))+
-            parseFloat(pintura)+
-            parseFloat(subcontratacion)+
-            (parseFloat(montar)*parseFloat(montarM))+
-            (parseFloat(embalar)*parseFloat(embalarM))+
-            parseFloat(transporte)+
-            parseFloat(otros))*
-            parseFloat(margen);
-
-        document.getElementById("resultadoFinal").value = resultado.toFixed(2)+`€`;
-    } else {
-        document.getElementById("resultadoFinal").value = "";
-    }
-    
 }
