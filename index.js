@@ -89,18 +89,14 @@ function reiniciar(){
     document.getElementById("calculo").style.display = "none";
     document.getElementById("total").style.display = "none";
     document.getElementById("operar").style.display = "none";
-    document.getElementById("operar").style.display = "none";
-    document.getElementById("tablas").style.display = "none";
 }
 
 function operar(){
     if( document.getElementById("elementosLista").innerHTML!=""){
         resultado();
         document.getElementById("operar").style.display = "block";
-        document.getElementById("tablas").style.display = "block";
     } else {
         document.getElementById("operar").style.display = "none";
-        document.getElementById("tablas").style.display = "none";
     }
 }
 
@@ -116,9 +112,6 @@ function resultado(){
     let proT=0;
     if(programacion!="" && programacionM!=""){
         proT=(parseFloat(programacion)*parseFloat(programacionM));
-        document.getElementById("programacionT").value=proT.toFixed(2)+"€";
-        document.getElementById("pro").innerHTML = parseFloat(programacion).toFixed(2)+"€";
-        document.getElementById("proM").innerHTML = "x"+parseFloat(programacionM).toFixed(2);
         document.getElementById("proT").innerHTML = proT.toFixed(2)+"€";
     }
 
@@ -127,9 +120,6 @@ function resultado(){
     let corteM=document.getElementById("corteM").value;
     if(corte!="" && corteM!=""){
         corT=parseFloat(corte)*parseFloat(corteM);
-        document.getElementById("corteT").value=corT+"€";
-        document.getElementById("cor").innerHTML = parseFloat(corte).toFixed(2)+"€";
-        document.getElementById("corM").innerHTML = "x"+parseFloat(corteM).toFixed(2);
         document.getElementById("corT").innerHTML = corT.toFixed(2)+"€";
     }
 
@@ -138,9 +128,6 @@ function resultado(){
     let plegarM=document.getElementById("plegarM").value;
     if(plegar!="" && plegarM!=""){
         pleT=(parseFloat(plegar)*parseFloat(plegarM));
-        document.getElementById("plegarT").value=pleT.toFixed(2)+"€";
-        document.getElementById("ple").innerHTML = parseFloat(plegar).toFixed(2)+"€";
-        document.getElementById("pleM").innerHTML = "x"+parseFloat(plegarM).toFixed(2);
         document.getElementById("pleT").innerHTML = pleT.toFixed(2)+"€";
     }
 
@@ -149,9 +136,6 @@ function resultado(){
     let operacionesAuxiliaresM=document.getElementById("operacionesAuxiliaresM").value;
     if(operacionesAuxiliares!="" && operacionesAuxiliaresM!=""){
         opAuxT=(parseFloat(operacionesAuxiliares)*parseFloat(operacionesAuxiliaresM));
-        document.getElementById("operacionesAuxiliaresT").value=opAuxT.toFixed(2)+"€";
-        document.getElementById("opAux").innerHTML = parseFloat(operacionesAuxiliares).toFixed(2)+"€";
-        document.getElementById("opAuxM").innerHTML = "x"+parseFloat(operacionesAuxiliaresM).toFixed(2);
         document.getElementById("opAuxT").innerHTML = opAuxT.toFixed(2)+"€";
     }
 
@@ -160,9 +144,6 @@ function resultado(){
     let mecanizarM=document.getElementById("mecanizarM").value;
     if(mecanizar!="" && mecanizarM!=""){
         mecT=(parseFloat(mecanizar)*parseFloat(mecanizarM));
-        document.getElementById("mecanizarT").value=mecT.toFixed(2)+"€";
-        document.getElementById("mec").innerHTML = parseFloat(mecanizar).toFixed(2)+"€";
-        document.getElementById("mecM").innerHTML = "x"+parseFloat(mecanizarM).toFixed(2);
         document.getElementById("mecT").innerHTML = mecT.toFixed(2)+"€";
     }
 
@@ -171,9 +152,6 @@ function resultado(){
     let soldarM=document.getElementById("soldarM").value;
     if(soldar!="" && soldarM!=""){
         solT=(parseFloat(soldar)*parseFloat(soldarM));
-        document.getElementById("soldarT").value=solT.toFixed(2)+"€";
-        document.getElementById("sol").innerHTML = parseFloat(soldar).toFixed(2)+"€";
-        document.getElementById("solM").innerHTML = "x"+parseFloat(soldarM).toFixed(2);
         document.getElementById("solT").innerHTML = solT.toFixed(2)+"€";
     }
 
@@ -196,9 +174,6 @@ function resultado(){
     let montarM=document.getElementById("montarM").value;
     if(montar!="" && montarM!=""){
         monT=(parseFloat(montar)*parseFloat(montarM));
-        document.getElementById("montarT").value=monT.toFixed(2)+"€";
-        document.getElementById("mon").innerHTML = parseFloat(montar).toFixed(2)+"€";
-        document.getElementById("monM").innerHTML = "x"+parseFloat(montarM).toFixed(2);
         document.getElementById("monT").innerHTML = monT.toFixed(2)+"€";
     }
 
@@ -207,9 +182,6 @@ function resultado(){
     let embalarM=document.getElementById("embalarM").value;
     if(embalar!="" && embalarM!=""){
         embT=(parseFloat(embalar)*parseFloat(embalarM));
-        document.getElementById("embalarT").value=embT.toFixed(2)+"€";
-        document.getElementById("emb").innerHTML = parseFloat(embalar).toFixed(2)+"€";
-        document.getElementById("embM").innerHTML = "x"+parseFloat(embalarM).toFixed(2);
         document.getElementById("embT").innerHTML = embT.toFixed(2)+"€";
     }
     
@@ -237,7 +209,6 @@ function resultado(){
     if(margen!=""){
         mar=parseFloat(margen);
         totalConMarg=(parseFloat(materialesTotal)+tot)*mar;
-        document.getElementById("mar").innerHTML = "x"+mar;
         document.getElementById("totalConMarg").innerHTML = totalConMarg.toFixed(2)+"€";
     }
 

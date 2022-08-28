@@ -86,153 +86,81 @@
                 <button type="button" class="btn btn-danger mt-2" onclick="borrar()">Borrar</button>
             </div>
             <div id="operar" class="mt-4" style="display: none">
-                <h1>Operaciones</h1>
-                <hr/>
                 <br>
                 <input id="materialesTotal" type="hidden" onchange="resultado()"/>
-                <div class="pb-5">
-                    <label for="programacion" class="form-label">Programación</label>
-                    <input id="programacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Programacion" aria-label="Programacion" onchange="resultado()"/>
-                    <input id="programacionM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="ProgramacionM" aria-label="ProgramacionM" value="0.6" onchange="resultado()"/>
-                    <input id="programacionT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Programacion" aria-label="ProgramacionT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="corte" class="form-label">Corte</label>
-                    <input id="corte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Corte" aria-label="Corte" onchange="resultado()"/>
-                    <input id="corteM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="CorteM" aria-label="CorteM" value="2" onchange="resultado()"/>
-                    <input id="corteT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Corte" aria-label="CorteT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="plegar" class="form-label">Plegar</label>
-                    <input id="plegar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Plegar" aria-label="Plegar" onchange="resultado()"/>
-                    <input id="plegarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="PlegarM" aria-label="PlegarM" value="1" onchange="resultado()"/>
-                    <input id="plegarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Plegar" aria-label="PlegarT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="operacionesAuxiliares" class="form-label">Op. Auxiliares</label>
-                    <input id="operacionesAuxiliares" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. Auxiliares" aria-label="operacionesAuxiliares" onchange="resultado()"/>
-                    <input id="operacionesAuxiliaresM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. AuxiliaresM" aria-label="operacionesAuxiliares" value="0.6" onchange="resultado()"/>
-                    <input id="operacionesAuxiliaresT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Op. Auxiliares" aria-label="TotalOperacionesAuxiliares" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="mecanizar" class="form-label">Mecanizar</label>
-                    <input id="mecanizar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Mecanizar" aria-label="Mecanizar" onchange="resultado()"/>
-                    <input id="mecanizarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MecanizarM" aria-label="MecanizarM" value="0.6" onchange="resultado()"/>
-                    <input id="mecanizarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Mecanizar" aria-label="MecanizarT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="soldar" class="form-label">Soldar</label>
-                    <input id="soldar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Soldar" aria-label="Soldar" onchange="resultado()"/>
-                    <input id="soldarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="SoldarM" aria-label="SoldarM" value="0.6" onchange="resultado()"/>
-                    <input id="soldarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Soldar" aria-label="SoldarT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="pintura" class="form-label">Pintura</label>
-                    <input id="pintura" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Pintura" aria-label="Pintura" onchange="resultado()"/>
-                    <input type="text" class="form-control text-center" placeholder="€" disabled>
-                </div>
-                <div class="pb-5">
-                    <label for="subcontratacion" class="form-label">Subcontratación</label>
-                    <input id="subcontratacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Subcontratacion" aria-label="Subcontratacion" onchange="resultado()"/>
-                    <input type="text" class="form-control text-center" placeholder="€" disabled>
-                </div>
-                <div class="pb-5">
-                    <label for="montar" class="form-label">Montar</label>
-                    <input id="montar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Montar" aria-label="Montar" onchange="resultado()"/>
-                    <input id="montarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MontarM" aria-label="MontarM" value="0.6" onchange="resultado()"/>
-                    <input id="montarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Montar" aria-label="MontarT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="embalar" class="form-label">Embalar</label>
-                    <input id="embalar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Embalar" aria-label="Embalar" onchange="resultado()"/>
-                    <input id="embalarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="EmbalarM" aria-label="EmbalarM" value="0.6" onchange="resultado()"/>
-                    <input id="embalarT" type="text" class="form-control text-center bg-secondary bg-opacity-50" placeholder="Total Embalar" aria-label="EmbalarT" disabled/>
-                </div>
-                <div class="pb-5">
-                    <label for="transporte" class="form-label">Transporte</label>
-                    <input id="transporte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Transporte" aria-label="Transporte" onchange="resultado()"/>
-                    <input type="text" class="form-control text-center" placeholder="€" disabled>
-                </div>
-                <div class="pb-5">
-                    <label for="otros" class="form-label">Otros</label>
-                    <input id="otros" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Otros" aria-label="Otros" onchange="resultado()"/>
-                    <input type="text" class="form-control text-center" placeholder="€" disabled>
-                </div>
-                <button type="button" class="btn btn-success mb-5" onclick="ocultar()">Ocultar</button>
-            </div>
-            <div id="tablas" class="mt-4" style="display: none">
-                <br>
+                <h2>Operaciones</h2>
+                <hr>
                 <table class="table table-striped">
                     <tbody>
                         <tr>
                             <th scope="row">Programación</th>
-                            <td id="pro">-</td>
-                            <td id="proM">-</td>
+                            <td><input id="programacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Programacion" aria-label="Programacion" onchange="resultado()"/></td>
+                            <td><input id="programacionM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="ProgramacionM" aria-label="ProgramacionM" value="0.6" onchange="resultado()"/></td>
                             <td id="proT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Corte</th>
-                            <td id="cor">-</td>
-                            <td id="corM">-</td>
+                            <td><input id="corte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Corte" aria-label="Corte" onchange="resultado()"/></td>
+                            <td><input id="corteM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="CorteM" aria-label="CorteM" value="2" onchange="resultado()"/></td>
                             <td id="corT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Plegar</th>
-                            <td id="ple">-</td>
-                            <td id="pleM">-</td>
+                            <td><input id="plegar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Plegar" aria-label="Plegar" onchange="resultado()"/></td>
+                            <td><input id="plegarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="PlegarM" aria-label="PlegarM" value="1" onchange="resultado()"/></td>
                             <td id="pleT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Op. Auxiliares</th>
-                            <td id="opAux">-</td>
-                            <td id="opAuxM">-</td>
+                            <td><input id="operacionesAuxiliares" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. Auxiliares" aria-label="operacionesAuxiliares" onchange="resultado()"/></td>
+                            <td><input id="operacionesAuxiliaresM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Op. AuxiliaresM" aria-label="operacionesAuxiliares" value="0.6" onchange="resultado()"/></td>
                             <td id="opAuxT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Mecanizar</th>
-                            <td id="mec">-</td>
-                            <td id="mecM">-</td>
+                            <td><input id="mecanizar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Mecanizar" aria-label="Mecanizar" onchange="resultado()"/></td>
+                            <td><input id="mecanizarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MecanizarM" aria-label="MecanizarM" value="0.6" onchange="resultado()"/></td>
                             <td id="mecT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Soldar</th>
-                            <td id="sol">-</td>
-                            <td id="solM">-</td>
+                            <td><input id="soldar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Soldar" aria-label="Soldar" onchange="resultado()"/></td>
+                            <td><input id="soldarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="SoldarM" aria-label="SoldarM" value="0.6" onchange="resultado()"/></td>
                             <td id="solT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Pintura</th>
-                            <td>-</td>
+                            <td><input id="pintura" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Pintura" aria-label="Pintura" onchange="resultado()"/></td>
                             <td>-</td>
                             <td id="pinT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Subcontratacion</th>
-                            <td>-</td>
+                            <td><input id="subcontratacion" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Subcontratacion" aria-label="Subcontratacion" onchange="resultado()"/></td>
                             <td>-</td>
                             <td id="subT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Montar</th>
-                            <td id="mon">-</td>
-                            <td id="monM">-</td>
+                            <td><input id="montar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Montar" aria-label="Montar" onchange="resultado()"/></td>
+                            <td><input id="montarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="MontarM" aria-label="MontarM" value="0.6" onchange="resultado()"/></td>
                             <td id="monT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Embalar</th>
-                            <td id="emb">-</td>
-                            <td id="embM">-</td>
+                            <td><input id="embalar" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Embalar" aria-label="Embalar" onchange="resultado()"/></td>
+                            <td><input id="embalarM" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="EmbalarM" aria-label="EmbalarM" value="0.6" onchange="resultado()"/></td>
                             <td id="embT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Transporte</th>
-                            <td>-</td>
+                            <td><input id="transporte" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Transporte" aria-label="Transporte" onchange="resultado()"/></td>
                             <td>-</td>
                             <td id="tranT">-</td>
                         </tr>
                         <tr>
                             <th scope="row">Otros</th>
-                            <td>-</td>
+                            <td><input id="otros" type="number" class="form-control text-center bg-secondary bg-opacity-25" placeholder="Otros" aria-label="Otros" onchange="resultado()"/></td>
                             <td>-</td>
                             <td id="otrT">-</td>
                         </tr>
@@ -244,11 +172,10 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="pb-5">
-                    <label for="margen" class="form-label">Margen</label>
-                    <input id="margen" type="number" class="form-control text-center  bg-secondary bg-opacity-25" placeholder="Margen" aria-label="Margen" value="1.4" onchange="resultado()"/>
-                    <input id="resultadoFinal" type="hidden" class="form-control text-center  bg-secondary bg-opacity-75" placeholder="Total" aria-label="Total" disabled/>
-                </div>
+                <input id="resultadoFinal" type="hidden" class="form-control text-center  bg-secondary bg-opacity-75" placeholder="Total" aria-label="Total" disabled/>
+                <br>
+                <h2>Total</h2>
+                <hr>
                 <table class="table table-striped">
                     <tbody>
                         <tr>
@@ -261,7 +188,7 @@
                         </tr>
                         <tr>
                             <th scope="row">Margen</th>
-                            <td id="mar">x1.4</td>
+                            <td ><input id="margen" type="number" class="form-control text-center  bg-secondary bg-opacity-25" placeholder="Margen" aria-label="Margen" value="1.4" onchange="resultado()"/></td>
                         </tr>
                         <tr class="table-info">
                             <th scope="row">Total</th>
