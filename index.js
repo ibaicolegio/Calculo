@@ -76,7 +76,7 @@ function anyadir(){
 function borrar(){
     localStorage.materiales="";
     lista();
-    reiniciar()
+    reiniciar();
 }
 
 function reiniciar(){
@@ -89,14 +89,23 @@ function reiniciar(){
     document.getElementById("calculo").style.display = "none";
     document.getElementById("total").style.display = "none";
     document.getElementById("operar").style.display = "none";
+    document.getElementById("operar").style.display = "none";
+    document.getElementById("tablas").style.display = "none";
 }
 
 function operar(){
     if( document.getElementById("elementosLista").innerHTML!=""){
+        resultado();
         document.getElementById("operar").style.display = "block";
+        document.getElementById("tablas").style.display = "block";
     } else {
         document.getElementById("operar").style.display = "none";
+        document.getElementById("tablas").style.display = "none";
     }
+}
+
+function ocultar(){
+    document.getElementById("operar").style.display = "none";
 }
 
 function resultado(){
@@ -218,15 +227,16 @@ function resultado(){
         document.getElementById("otrT").innerHTML = otrT.toFixed(2)+"€";
     }
 
-    let tot=parseFloat(materialesTotal)+proT+corT+pleT+opAuxT+mecT+solT+pinT+subT+monT+embT+tranT+otrT;
+    let tot=proT+corT+pleT+opAuxT+mecT+solT+pinT+subT+monT+embT+tranT+otrT;
     document.getElementById("tot").innerHTML=tot.toFixed(2)+"€";
+    document.getElementById("tot2").innerHTML=tot.toFixed(2)+"€";
 
     let mar=0;
     let totalConMarg=0;
     let margen=document.getElementById("margen").value;
     if(margen!=""){
         mar=parseFloat(margen);
-        totalConMarg=tot*mar;
+        totalConMarg=(parseFloat(materialesTotal)+tot)*mar;
         document.getElementById("mar").innerHTML = "x"+mar;
         document.getElementById("totalConMarg").innerHTML = totalConMarg.toFixed(2)+"€";
     }
